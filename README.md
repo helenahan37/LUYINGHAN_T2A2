@@ -47,7 +47,6 @@
 8. Rename the '.env.sample' file to '.env' file and add the following lines:
 
    ```
-
    DATABASE_URL="postgresql+psycopg2://vg_dev:123456@localhost:5432/virtual_garden_db"
    JWT_SECRET_KEY="secret"
    ```
