@@ -126,7 +126,7 @@ Relationship Management: ORM simplifies handling database relationships, represe
 
 Code Reusability: ORM promotes code reusability, allowing developers to create generic database access methods.
 
-####Benefits of using an ORM[^5]:
+#### Benefits of using an ORM[^5]:
 
 Language Familiarity: Developers can use the programming language they are comfortable with, making development faster and more efficient.
 
@@ -162,12 +162,12 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: user_name, email and password
 - Expected response data
 
-- failed to provide required data
-  ![register](../LuyingHan_T2A2/doc/register.png)
-- invalid input format
-  ![register](../LuyingHan_T2A2/doc/register%20invalid%20input.png)
-- successfully registered
-  ![register](../LuyingHan_T2A2/doc/success%20registered.png)
+  - failed to provide required data
+    ![register](/doc/register.png)
+  - invalid input format
+    ![register](/doc/register%20invalid%20input.png)
+  - successfully registered
+    ![register](/doc/success%20registered.png)
 
 #### login as a registered user
 
@@ -177,12 +177,12 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: email and password
 - Expected response data
 
-- failed to provide required data
-  ![login](../LuyingHan_T2A2/doc/login.png)
-- incorrect email or password
-  ![login](../LuyingHan_T2A2/doc/incorrect%20login.png)
-- successfully logged in
-  ![login](../LuyingHan_T2A2/doc/sucesslogin.png)
+  - failed to provide required data
+    ![login](/doc/login.png)
+  - incorrect email or password
+    ![login](/doc/incorrect%20login.png)
+  - successfully logged in
+    ![login](/doc/sucesslogin.png)
 
 #### READ all users
 
@@ -193,12 +193,12 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Authentication required: JWT token
 - Required data: None
 - Expected response data
-- failed to provide token
-  ![login](../LuyingHan_T2A2/doc/login-failed_provide_jwt.png)
-- failed to provide admin token
-  ![login](../LuyingHan_T2A2/doc/login_forbidden.png)
-- admin successfully logged in
-  ![login](../LuyingHan_T2A2/doc/admin_login_success.png)
+  - failed to provide token
+    ![login](/doc/login-failed_provide_jwt.png)
+  - failed to provide admin token
+    ![login](/doc/login_forbidden.png)
+  - admin successfully logged in
+    ![login](/doc/admin_login_success.png)
 
 #### READ one users
 
@@ -209,14 +209,14 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Authentication required: JWT token
 - Required data: user_id
 - Expected response data
-- failed to provide token
-  ![login](../LuyingHan_T2A2/doc/user-get-nojwt.png)
-- failed to provide admin token
-  ![login](../LuyingHan_T2A2/doc/user-get-noadmintoken.png)
-- user_id not found
-  ![login](../LuyingHan_T2A2/doc/user-get-useridnotfound.png)
-- user successfully found
-  ![login](../LuyingHan_T2A2/doc/user-get-success.png)
+  - failed to provide token
+    ![login](/doc/user-get-nojwt.png)
+  - failed to provide admin token
+    ![login](/doc/user-get-noadmintoken.png)
+  - user_id not found
+    ![login](/doc/user-get-useridnotfound.png)
+  - user successfully found
+    ![login](/doc/user-get-success.png)
 
 #### UPDATE account info
 
