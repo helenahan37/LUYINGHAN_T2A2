@@ -14,7 +14,37 @@
    python3 -m venv .venv && source .venv/bin/activate
    ```
 
-3. Rename the '.env.sample' file to '.env' file and add the following lines:
+3. Insure you have PostgreSQL installed and running on your terminal:
+
+   ```
+   open the terminal and run `psql`
+   ```
+
+4. Create a database called 'virtual_garden_db' in PostgreSQL
+
+   ```
+   CREATE DATABASE virtual_garden_db;
+   ```
+
+5. Create a role and set the password:
+
+   ```
+   CREATE USER vg_dev WITH PASSWORD '123456';
+   ```
+
+6. Grant all privileges on the database to the role:
+
+   ```
+   GRANT ALL PRIVILEGES ON DATABASE virtual_garden_db TO vg_dev;
+   ```
+
+7. Grant all privileges on the schema to the role
+
+   ```
+   GRANT ALL ON SCHEMA public TO vg_dev;
+   ```
+
+8. cd into 'src' folder and rename the '.env.sample' file to '.env' file and add the following lines:
 
    ```
 
@@ -22,37 +52,7 @@
    JWT_SECRET_KEY="secret"
    ```
 
-4. insure you have PostgreSQL installed and running on your terminal:
-
-   ```
-   open the terminal and run `psql`
-   ```
-
-5. Create a database called 'virtual_garden_db' in PostgreSQL
-
-   ```
-   CREATE DATABASE virtual_garden_db;
-   ```
-
-6. Create a role and set the password:
-
-   ```
-   CREATE USER vg_dev WITH PASSWORD '123456';
-   ```
-
-7. Grant all privileges on the database to the role:
-
-   ```
-   GRANT ALL PRIVILEGES ON DATABASE virtual_garden_db TO vg_dev;
-   ```
-
-8. Grant all privileges on the schema to the role
-
-   ```
-   GRANT ALL ON SCHEMA public TO vg_dev;
-   ```
-
-9. cd into the 'src' folder and install the required packages:
+9. Install the required packages:
 
    ```
    pip3 install -r requirements.txt
