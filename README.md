@@ -1,11 +1,11 @@
-#T2A2 - API Webserver Project - Virtual Garden API
+# T2A2 - API Webserver Project - Virtual Garden API
 
-##Installation Instructions:
+## Installation Instructions:
 
 1. Clone the repository from GitHub
 
    ```
-   git@github.com:helenahan37/LuyingHan_T2A2.git
+   git@github.com:helenahan37/LUYINGHAN_T2A2.git
    ```
 
 2. Create a virtual environment and activate it:
@@ -70,7 +70,7 @@
     flask run
     ```
 
-##R1. Identification of the problem you are trying to solve by building this particular app.
+## R1. Identification of the problem you are trying to solve by building this particular app.
 
 The problem being addressed by building this particular app is the time and effort constraints that modern society poses on garden design and maintenance. Many individuals find it difficult to allocate enough time to plan and manage their real gardens effectively. Garden design requires careful consideration of plant selection, arrangement, and maintenance, which can be daunting and time-consuming for busy individuals. Additionally, lack of experience and knowledge about plants' attributes may lead to suboptimal garden designs and unsatisfactory outcomes.
 
@@ -78,7 +78,7 @@ To tackle this problem, the virtual garden API provides a solution that allows u
 
 ---
 
-##R2. Why is it a problem that needs solving?
+## R2. Why is it a problem that needs solving?
 
 The need to solve this problem arises due to the increasing demands and constraints of modern life. Many people lead busy lifestyles, juggling work, family, and various responsibilities, leaving limited time and energy for hobbies like gardening. As a result, individuals may neglect their gardens or miss out on the joy of creating and tending to their green spaces. That's why I came up with this API, inspired by the virtual home design games I played during my childhood.
 
@@ -86,7 +86,7 @@ The virtual garden API addresses this problem by offering a convenient and acces
 
 ---
 
-##R3. Why have you chosen this database system. What are the drawbacks compared to others?
+## R3. Why have you chosen this database system. What are the drawbacks compared to others?
 
 I am utilizing PostgreSQL as my relational database system. PostgreSQL, often referred to as "Postgres," employs Structured Query Language (SQL) for data access and is highly suitable for integration with other tools. Its ability to handle data integrity and complex operations makes it an excellent choice for my needs.
 
@@ -100,7 +100,8 @@ Moreover, PostgreSQL supports constraints and validation for JSON data, ensuring
 
 By choosing PostgreSQL, I can effectively manage and interact with JSON data, taking advantage of its native support and performance optimizations to enhance the functionality and reliability of my application.
 
-#####Drawbacks[^3]:
+##### Drawbacks[^3]:
+
 PostgreSQL, being a community-driven open-source database management system, lacks centralized ownership, which has led to challenges in gaining widespread recognition despite its comprehensive features and comparability to other DBMS systems.
 
 When aiming for speed improvements, PostgreSQL may require more effort than MySQL, as its focus lies on maintaining compatibility with existing systems.
@@ -111,9 +112,9 @@ In performance metrics, PostgreSQL tends to be slightly slower than MySQL.
 
 ---
 
-##R4. Identify and discuss the key functionalities and benefits of an ORM
+## R4. Identify and discuss the key functionalities and benefits of an ORM
 
-####Key functionalities of an ORM[^4]:
+#### Key functionalities of an ORM[^4]:
 
 Abstraction of Database Interaction: ORM allows developers to interact with the database using their preferred programming language, abstracting away the need to write raw SQL queries.
 
@@ -139,7 +140,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 ---
 
-##R5. Document all endpoints for your API
+## R5. Document all endpoints for your API
 
 ### Welcome Page
 
@@ -153,7 +154,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 ### Auth Routes
 
-####CREATE a new user
+#### CREATE a new user
 
 - HTTP request: POST
 - URL: localhost:8080/auth/register
@@ -168,7 +169,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - successfully registered
   ![register](../LuyingHan_T2A2/doc/success%20registered.png)
 
-####login as a registered user
+#### login as a registered user
 
 - HTTP request: POST
 - URL: localhost:8080/auth/login
@@ -183,8 +184,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - successfully logged in
   ![login](../LuyingHan_T2A2/doc/sucesslogin.png)
 
-####READ all users
-######only admin can get all users
+#### READ all users
+
+###### only admin can get all users
 
 - HTTP request: GET
 - URL: localhost:8080/auth/user
@@ -198,8 +200,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - admin successfully logged in
   ![login](../LuyingHan_T2A2/doc/admin_login_success.png)
 
-####READ one users
-######only admin can get user by user_id
+#### READ one users
+
+###### only admin can get user by user_id
 
 - HTTP request: GET
 - URL: localhost:8080/auth/user/user_id
@@ -215,30 +218,31 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - user successfully found
   ![login](../LuyingHan_T2A2/doc/user-get-success.png)
 
-####UPDATE account info
-######only account owner and admin can update account info, only current admin can change is_admin status
+#### UPDATE account info
+
+###### only account owner and admin can update account info, only current admin can change is_admin status
 
 - HTTP request: PUT or PATCH
 - URL: localhost:8080/auth/user/user_id
 - Authentication required: JWT token
 - Required data: user_id, the account info you want to update
 - Expected response data
-- failed to provide token
-  ![login](/doc/login_failed_provide_token.png)
-- user_id not found
-  ![login](/doc/login_useridnotfound.png)
-- login user is not the account owner or admin
-  ![login](/doc/login_usernotowner.png)
-- user_name and email must be unique
-  ![login](/doc/login_unique.png)
-- login user cannot change is_admin status
-  ![login](/doc/login_failedchangeadmin.png)
-- account info successfully updated
-  ![login](/doc/login_updatesuccess.png)
-- admin can change is_admin status
-  ![login](/doc/login_adminupdate.png)
+  - failed to provide token
+    ![login](/doc/login_failed_provide_token.png)
+  - user_id not found
+    ![login](/doc/login_useridnotfound.png)
+  - login user is not the account owner or admin
+    ![login](/doc/login_usernotowner.png)
+  - user_name and email must be unique
+    ![login](/doc/login_unique.png)
+  - login user cannot change is_admin status
+    ![login](/doc/login_failedchangeadmin.png)
+  - account info successfully updated
+    ![login](/doc/login_updatesuccess.png)
+  - admin can change is_admin status
+    ![login](/doc/login_adminupdate.png)
 
-####DELETE account
+#### DELETE account
 
 ###### only account owner and admin can delete account
 
@@ -247,19 +251,20 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Authentication required: JWT token
 - Required data: user_id
 - Expected response data
-- failed to provide token
-  ![login](/doc/login-delete-failedprovidetoken.png)
-- user_id not found
-  ![login](/doc/login-delete-idnotfound.png)
-- login user is not the account owner or admin
-  ![login](/doc/login-delete-notaccountowner.png)
-- account successfully deleted
-  ![login](/doc/login-delete-sucess.png)
+  - failed to provide token
+    ![login](/doc/login-delete-failedprovidetoken.png)
+  - user_id not found
+    ![login](/doc/login-delete-idnotfound.png)
+  - login user is not the account owner or admin
+    ![login](/doc/login-delete-notaccountowner.png)
+  - account successfully deleted
+    ![login](/doc/login-delete-sucess.png)
 
 ## Garden Routes
 
-####READ all gardens
-######any visitors can access
+#### EAD all gardens
+
+###### any visitors can access
 
 - HTTP request: GET
 - URL: localhost:8080/garden
@@ -268,8 +273,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Expected response data
   ![login](/doc/garden-getallgardens.png)
 
-####READ a garden by garden_id
-######any visitors can access
+#### READ a garden by garden_id
+
+###### any visitors can access
 
 - HTTP request: GET
 - URL: localhost:8080/garden/garden_id
@@ -281,8 +287,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
   - garden_id not found
     ![login](/doc/garden-idnotfound.png)
 
-####CREATE a new garden
-######only registered user can access, garden_name must be unique
+#### CREATE a new garden
+
+###### only registered user can access, garden_name must be unique
 
 - HTTP request: POST
 - URL: localhost:8080/garden
@@ -301,8 +308,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
   - garden successfully created
     ![login](/doc/garden-post-success.png)
 
-####UPDATE garden
-######only garden owner or admin can update, garden_name must be unique
+#### UPDATE garden
+
+###### only garden owner or admin can update, garden_name must be unique
 
 - HTTP request: PUT or PATCH
 - URL: localhost:8080/garden/garden_id
@@ -320,8 +328,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
   - garden successfully updated
     ![login](/doc/garden-post-updatesuccess.png)
 
-####DELETE garden
-######only garden owner or admin can delete
+#### DELETE garden
+
+###### only garden owner or admin can delete
 
 - HTTP request: DELETE
 - URL: localhost:8080/garden/garden_id
@@ -339,8 +348,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 ### Plants Routes
 
-####READ all plants
-######any visitors can access
+#### READ all plants
+
+###### any visitors can access
 
 - HTTP request: GET
 - URL: localhost:8080/plant
@@ -349,8 +359,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Expected response data
   ![login](/doc/plant-get-allplants.png)
 
-####READ plant by id
-######any visitors can access
+#### READ plant by id
+
+###### any visitors can access
 
 - HTTP request: GET
 - URL: localhost:8080/plant/plant_id
@@ -362,8 +373,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
   - plant_id successfully found
     ![login](/doc/plants-get-idfound.png)
 
-####CREATE new plant
-######only admin can access, plant_name must be unique
+#### CREATE new plant
+
+###### only admin can access, plant_name must be unique
 
 - HTTP request: GET
 - URL: localhost:8080/plant/plant_id
@@ -381,29 +393,31 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
   - plant successfully created
     ![login](/doc/plant-post-success.png)
 
-####UPDATE plant
-######only admin can access, plant_name must be unique
+#### UPDATE plant
+
+###### only admin can access, plant_name must be unique
 
 - HTTP request: PUT or PATCH
 - URL: localhost:8080/plant/plant_id
 - Authentication required: JWT token
 - Required data: plant_id, plant info you want to update
 - Expected response data
-- failed to provide token
-  ![login](/doc/plant-update-nojwt.png)
-- login user not admin
-  ![login](/doc/plant-update-notadmin.png)
-- plant id not find
-  ![login](/doc/plant-update-notfoundid.png)
-- plant name already exists
-  ![login](/doc/plant-update-nameexists.png)
-- invalid input
-  ![login](/doc/plant-update-invalidinput.png)
-- plant successfully updated
-  ![login](/doc/plant-post-success.png)
+  - failed to provide token
+    ![login](/doc/plant-update-nojwt.png)
+  - login user not admin
+    ![login](/doc/plant-update-notadmin.png)
+  - plant id not find
+    ![login](/doc/plant-update-notfoundid.png)
+  - plant name already exists
+    ![login](/doc/plant-update-nameexists.png)
+  - invalid input
+    ![login](/doc/plant-update-invalidinput.png)
+  - plant successfully updated
+    ![login](/doc/plant-post-success.png)
 
-####DELETE plant
-######only admin can access
+#### DELETE plant
+
+###### only admin can access
 
 - HTTP request: DELETE
 - URL: localhost:8080/plant/plant_id
@@ -421,8 +435,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 ### garden_plants Routes
 
-####READ garden_plants by garden_id
-######all visitors can get garden_plants from any garden
+#### READ garden_plants by garden_id
+
+###### all visitors can get garden_plants from any garden
 
 - HTTP request: GET
 - URL: localhost:8080/garden/garden_id/garden_plants
@@ -436,7 +451,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
   - garden_plants successfully found
     ![login](/doc/gardenplants-get-success.png)
 
-####CREATE garden_plants by garden_id and plant_id
+#### CREATE garden_plants by garden_id and plant_id
 
 ###### only garden owner and admin can create garden_plant, garden_plant position must be unique in a garden
 
@@ -461,9 +476,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
   - position already exists
     ![login](/doc/gp-post-positionexists.png)
 
-####UPDATE garden_plants by garden_id and garden_plant_id
+#### UPDATE garden_plants by garden_id and garden_plant_id
 
-######only garden owner or admin can update garden_plant, position must be unique in a garden
+###### only garden owner or admin can update garden_plant, position must be unique in a garden
 
 - HTTP request: PUT or PATCH
 - URL: localhost:8080/garden/garden_id/garden_plant_id
@@ -485,7 +500,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
   - garden_plants successfully updated
     ![login](/doc/gp-update-success.png)
 
-####DELETE garden_plants by garden_id and garden_plant_id
+#### DELETE garden_plants by garden_id and garden_plant_id
 
 ###### only garden owner and admin can delete garden_plant
 
@@ -509,7 +524,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 #### POST a new comment by garden_id
 
-######only login user can post a new comment by garden id
+###### only login user can post a new comment by garden id
 
 - HTTP request: POST
 - URL: localhost:8080/garden/garden_id/comment
@@ -528,7 +543,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 #### READ all comments by garden_id
 
-######only login user can read all comments by garden id
+###### only login user can read all comments by garden id
 
 - HTTP request: GET
 - URL: localhost:8080/garden/garden_id/comment
@@ -546,7 +561,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 #### UPDATE comment by garden_id and comment_id
 
-######only login comment owner or admin can update comment by comment id
+###### only login comment owner or admin can update comment by comment id
 
 - HTTP request: PUT or PATCH
 - URL: localhost:8080/garden/garden_id/comment/comment_id
@@ -570,7 +585,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 #### DELETE comment by garden_id and comment_id
 
-######only login comment owner or admin can delete comment by comment id
+###### only login comment owner or admin can delete comment by comment id
 
 - HTTP request: DELETE
 - URL: localhost:8080/garden/garden_id/comment/comment_id
@@ -590,10 +605,11 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 
 ---
 
-##R6. An ERD for your app
+## R6. An ERD for your app
+
 ![ERD](/doc/ERD.png)
 
-##R7. Detail any third party services that your app will use
+## R7. Detail any third party services that your app will use
 
 - **Flask**: Flask is a micro web framework written in Python. It is used to build web applications and APIs. I am using Flask to build my API.
 - **SQLAlchemy**: SQLAlchemy is an open-source SQL toolkit and object-relational mapper for Python. It designed for efficient and high-performing database access. I am using SQLAlchemy to interact with my PostgreSQL database.
@@ -604,7 +620,8 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - **psycopg2-binary**: psycopg2-binary is a PostgreSQL database adapter for Python. I am using psycopg2-binary to connect my application to PostgreSQL.
 - **Werkzeug**: Werkzeug is a comprehensive WSGI web application library. I am using Werkzeug to handle HTTP requests and responses for my application.
 
-##R8. Describe your projects models in terms of the relationships they have with each other
+## R8. Describe your projects models in terms of the relationships they have with each other
+
 In relational databases, relationships define how different tables are connected to each other. There are several types of relationships, such as one-to-one, one-to-many, and many-to-many. These relationships help establish the connections between records in different tables and enable efficient data retrieval and manipulation.
 
 In Flask, SQLAlchemy is a widely used Object-Relational Mapping (ORM) library. It allows users to define their database models using Python classes and handles the communication between their Python code and the underlying database. SQLAlchemy also supports defining relationships between these models, which are then translated into the corresponding database relationships.
@@ -739,7 +756,7 @@ class Comment(db.Model):
 
 The user attribute establishes a many-to-one relationship with the User model, with the "back_populates" argument set to "comments." Every comment belongs to a single user. Similarly, the garden attribute establishes a many-to-one relationship with the Garden model, with the "back_populates" argument set to "comments." Every comment belongs to a single garden.
 
-##R9. Discuss the database relations to be implemented in your application
+## R9. Discuss the database relations to be implemented in your application
 
 In my application, I have implemented the following database relationships:
 
@@ -776,7 +793,7 @@ The GardenPlant model acts as a join table between Garden and Plant models, esta
 A Garden can be associated with multiple Plants through the GardenPlants, and a Plant can be associated with multiple Gardens through the GardenPlants.
 This is achieved by having garden_id and plant_id as foreign keys in the GardenPlant model, referencing the primary keys in the Garden and Plant models, respectively.
 
-##R10. Describe the way tasks are allocated and tracked in your project
+## R10. Describe the way tasks are allocated and tracked in your project
 
 I am using Trello to track my project. I have created a Trello board with the following lists:
 project planning, models, schemas, controller, endpoints, testing and error handling, bug fix, D.R.Y code, and readme file.
