@@ -14,8 +14,9 @@ def create_app():
     app = Flask(__name__)
 
     app.json.sort_keys = False
-
+    # configuration key for SQLAlchemy, used to define the URI (Uniform Resource Identifier) for connecting to the database.
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+    # configuration key for the JWT, etrieves the value of the environment variable named "JWT_SECRET_KEY", used to sign and verify the JWT, 
     app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY")
 
     # Error handlers
