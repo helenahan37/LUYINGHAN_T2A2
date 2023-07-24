@@ -810,7 +810,8 @@ Trello Board: [Link](https://trello.com/b/kkaIJSVf/virtualgarden-api)
 
 ---
 
-##Reference List
+## Reference List
+
 [^1]: "What is PostgreSQL?", _EDUCBA_, Retrieved 21th July 2023, https://www.educba.com/what-is-postgresql/
 [^2]: "PostgreSQL and JSON – How to Use JSON Data in PostgreSQL", _freecodecamp_, Retrieved 21th July 2023, https://www.freecodecamp.org/news/postgresql-and-json-use-json-data-in-postgresql/
 [^3]: "What is PostgreSQL? Introduction, Advantages & Disadvantages", _guru99_, Retrieved 21th July 2023, https://www.guru99.com/introduction-postgresql.html
