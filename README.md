@@ -52,13 +52,13 @@
    GRANT ALL ON SCHEMA public TO vg_dev;
    ```
 
-9. Install the required packages:
+9. cd into the 'src' folder and install the required packages:
 
    ```
    pip3 install -r requirements.txt
    ```
 
-10. cd into the 'src' folder and run the following command to reset the database tables:
+10. Run the following command to reset the database tables:
 
     ```
     flask db drop && flask db create && flask db seed
