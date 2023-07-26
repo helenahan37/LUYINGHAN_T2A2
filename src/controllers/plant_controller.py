@@ -76,7 +76,7 @@ def update_plant(id):
             return {"message": f"Plant id:'{id}' not found"}, 404
     except IntegrityError as err:
         if err.orig.pgcode == errorcodes.UNIQUE_VIOLATION:
-            return {"error": f"Garden name: '{body_data.get('plant_name')}' already exists"}, 409
+            return {"error": f"Plant name: '{body_data.get('plant_name')}' already exists"}, 409
 
 
 # plant delete route
