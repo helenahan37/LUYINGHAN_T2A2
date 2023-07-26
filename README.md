@@ -806,7 +806,7 @@ Upon successful login, the user receives a JWT (JSON Web Token) that serves as a
 
 **Garden Model:**
 
-In the Garden model, the garden_name field is required to be unique, ensuring that no two gardens can have the same garden_name in the database. Fields format is enforced through validation rules specified in the schema.
+In the Garden model, the garden_name field is required to be unique, ensuring that no two gardens can have the same garden_name in the database. Fields format is enforced through validation rules specified in the schema. Creation_date is set to the current date and description is set to null if not provided.
 
 **Plant Model:**
 
