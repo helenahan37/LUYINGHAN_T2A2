@@ -794,34 +794,34 @@ This is achieved by having garden_id and plant_id as foreign keys in the GardenP
 
 **User Model:**
 
-In the User model, the user_name and email fields are required to be unique, ensuring that no two users can have the same user_name or email in the database. Fields formats are enforced through validation rules specified in the schema.
+In the User model, the "user_name" and "email" fields are required to be unique, ensuring that no two users can have the same "user_name" or "email" in the database. Fields formats are enforced through validation rules specified in the schema.
 
-To maintain data integrity, the is_admin field is set to False by default when a user is registered. This design prevents ordinary users from changing their is_admin status and gaining administrative privileges.
+To maintain data integrity, the "is_admin" field is set to False by default when a user is registered. This design prevents ordinary users from changing their "is_admin" status and gaining administrative privileges.
 
-During user registration, the password is securely hashed using bcrypt, ensuring that passwords are stored securely in the database.
+During user registration, the "password" is securely hashed using bcrypt, ensuring that passwords are stored securely in the database.
 
-For user authentication, user needs to verify the provided email and password combination. This method ensures that the entered credentials match the hashed password stored in the database, allowing authenticated users to access the system.
+For user authentication, user needs to verify the provided "email" and "password" combination. This method ensures that the entered credentials match the hashed password stored in the database, allowing authenticated users to access the system.
 
 Upon successful login, the user receives a JWT (JSON Web Token) that serves as an authentication token.
 
 **Garden Model:**
 
-In the Garden model, the garden_name field is required to be unique, ensuring that no two gardens can have the same garden_name in the database. Creation_date is set to the current date and description is set to null if not provided.
+In the Garden model, the "garden_name" field is required to be unique and cannot be null, ensuring that no two gardens can have the same "garden_name" in the database. "creation_date" is set to the current date and "description" is set to null if not provided.
 Fields format are enforced through validation rules specified in the schema.
 
 **Plant Model:**
 
-In the Plant model, the plant_name field is required to be unique and cannot be null, ensuring that no two plants can have the same plant_name in the database. Fields format is enforced through validation rules specified in the schema. Genus is also required and cannot be null. Watering and growth_rate are set to default values if not provided. The validate for watering and growth_rate are set to only accept the provided values.
+In the Plant model, the "plant_name" field is required to be unique and cannot be null, ensuring that no two plants can have the same "plant_name" in the database. Fields format is enforced through validation rules specified in the schema. "genus" is also required and cannot be null. "watering" and "growth_rate" are set to default values if not provided. The validate for "watering" and "growth_rate" are set to only accept the provided values.
 
 **GardenPlant Model:**
 
-In the GardenPlant model, the position field is mandatory and cannot be left empty. Each specific garden allows only one unique garden_plant to be placed in a particular position. This means that within a single garden, no two garden_plants can occupy the same position.
+In the GardenPlant model, the "position" field cannot be null. Each specific garden allows only one unique garden_plant to be placed in a particular position. This means that within a single garden, no two garden_plants can occupy the same position.
 
-The color and size fields are equipped with default values, which are utilized if no values are provided during the creation of a garden_plant object. For the color, size, and position fields, the validation has been set up to accept only predefined values.
+The "color" and "size" fields are equipped with default values, which are utilized if no values are provided during the creation of a garden_plant object. For each "color", "size", and "position" fields, the validation has been set up to accept only predefined values.
 
 **Comment Model:**
 
-In the Comment model, the message field is mandatory and cannot be left empty and the format validation has been applied in schema. The comment_date field is set to the current date.
+In the Comment model, the "message" field cannot be null and the format validation has been applied in schema. The "comment_date" field is set to the current date.
 
 ## R10. Describe the way tasks are allocated and tracked in your project
 
