@@ -149,7 +149,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: None
 - Expected response data
 
-![welcome](/doc/welcome.png)
+![welcome](/docs/welcome.png)
 
 ### Auth Routes
 
@@ -162,11 +162,11 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Expected response data
 
   - failed to provide required data
-    ![register](/doc/register.png)
+    ![register](/docs/register.png)
   - invalid input format
-    ![register](/doc/register%20invalid%20input.png)
+    ![register](/docs/register%20invalid%20input.png)
   - successfully registered
-    ![register](/doc/success%20registered.png)
+    ![register](/docs/success%20registered.png)
 
 #### login as a registered user
 
@@ -177,11 +177,11 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Expected response data
 
   - failed to provide required data
-    ![login](/doc/login.png)
+    ![login](/docs/login.png)
   - incorrect email or password
-    ![login](/doc/incorrect%20login.png)
+    ![login](/docs/incorrect%20login.png)
   - successfully logged in
-    ![login](/doc/sucesslogin.png)
+    ![login](/docs/sucesslogin.png)
 
 #### READ all users
 
@@ -193,11 +193,11 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: None
 - Expected response data
   - failed to provide token
-    ![login](/doc/login-failed_provide_jwt.png)
+    ![login](/docs/login-failed_provide_jwt.png)
   - failed to provide admin token
-    ![login](/doc/login_forbidden.png)
+    ![login](/docs/login_forbidden.png)
   - admin successfully logged in
-    ![login](/doc/admin_login_success.png)
+    ![login](/docs/admin_login_success.png)
 
 #### READ one users
 
@@ -209,13 +209,13 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: user_id
 - Expected response data
   - failed to provide token
-    ![login](/doc/user-get-nojwt.png)
+    ![login](/docs/user-get-nojwt.png)
   - failed to provide admin token
-    ![login](/doc/user-get-noadmintoken.png)
+    ![login](/docs/user-get-noadmintoken.png)
   - user_id not found
-    ![login](/doc/user-get-useridnotfound.png)
+    ![login](/docs/user-get-useridnotfound.png)
   - user successfully found
-    ![login](/doc/user-get-success.png)
+    ![login](/docs/user-get-success.png)
 
 #### UPDATE account info
 
@@ -227,19 +227,19 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: user_id, the account info you want to update
 - Expected response data
   - failed to provide token
-    ![login](/doc/login_failed_provide_token.png)
+    ![login](/docs/login_failed_provide_token.png)
   - user_id not found
-    ![login](/doc/login_useridnotfound.png)
+    ![login](/docs/login_useridnotfound.png)
   - login user is not the account owner or admin
-    ![login](/doc/login_usernotowner.png)
+    ![login](/docs/login_usernotowner.png)
   - user_name and email must be unique
-    ![login](/doc/login_unique.png)
+    ![login](/docs/login_unique.png)
   - login user cannot change is_admin status
-    ![login](/doc/login_failedchangeadmin.png)
+    ![login](/docs/login_failedchangeadmin.png)
   - account info successfully updated
-    ![login](/doc/login_updatesuccess.png)
+    ![login](/docs/login_updatesuccess.png)
   - admin can change is_admin status
-    ![login](/doc/login_adminupdate.png)
+    ![login](/docs/login_adminupdate.png)
 
 #### DELETE account
 
@@ -251,13 +251,13 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: user_id
 - Expected response data
   - failed to provide token
-    ![login](/doc/login-delete-failedprovidetoken.png)
+    ![login](/docs/login-delete-failedprovidetoken.png)
   - user_id not found
-    ![login](/doc/login-delete-idnotfound.png)
+    ![login](/docs/login-delete-idnotfound.png)
   - login user is not the account owner or admin
-    ![login](/doc/login-delete-notaccountowner.png)
+    ![login](/docs/login-delete-notaccountowner.png)
   - account successfully deleted
-    ![login](/doc/login-delete-sucess.png)
+    ![login](/docs/login-delete-sucess.png)
 
 ## Garden Routes
 
@@ -270,7 +270,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Authentication required: No
 - Required data: None
 - Expected response data
-  ![login](/doc/garden-getallgardens.png)
+  ![login](/docs/garden-getallgardens.png)
 
 #### READ a garden by garden_id
 
@@ -282,9 +282,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id
 - Expected response data
   - garden_id successfully found
-    ![login](/doc/garden-getallgardenbyid.png)
+    ![login](/docs/garden-getallgardenbyid.png)
   - garden_id not found
-    ![login](/doc/garden-idnotfound.png)
+    ![login](/docs/garden-idnotfound.png)
 
 #### CREATE a new garden
 
@@ -297,15 +297,15 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Expected response data
 
   - failed to provide token
-    ![login](/doc/garden-post-missingjwt.png)
+    ![login](/docs/garden-post-missingjwt.png)
   - failed to provide garden_name
-    ![login](/doc/garden-post-failedprovidename.png)
+    ![login](/docs/garden-post-failedprovidename.png)
   - garden_name already exists
-    ![login](/doc/garden-post-nameexists.png)
+    ![login](/docs/garden-post-nameexists.png)
   - invalid input
-    ![login](/doc/garden-post-invalidinput.png)
+    ![login](/docs/garden-post-invalidinput.png)
   - garden successfully created
-    ![login](/doc/garden-post-success.png)
+    ![login](/docs/garden-post-success.png)
 
 #### UPDATE garden
 
@@ -317,15 +317,15 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id, garden info you want to update
 - Expected response data
   - failed to provide token
-    ![login](/doc/garden-update-failedprovidejwt.png)
+    ![login](/docs/garden-update-failedprovidejwt.png)
   - garden_id not found
-    ![login](/doc/garden-update-idnotfound.png)
+    ![login](/docs/garden-update-idnotfound.png)
   - login user is not the garden owner or admin
-    ![login](/doc/garden-update-notowner.png)
+    ![login](/docs/garden-update-notowner.png)
   - garden_name already exists
-    ![login](/doc/garden-update-nameexists.png)
+    ![login](/docs/garden-update-nameexists.png)
   - garden successfully updated
-    ![login](/doc/garden-post-updatesuccess.png)
+    ![login](/docs/garden-post-updatesuccess.png)
 
 #### DELETE garden
 
@@ -337,13 +337,13 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id
 - Expected response data
   - failed to provide token
-    ![login](/doc/garden-delete-failedprovidejwt.png)
+    ![login](/docs/garden-delete-failedprovidejwt.png)
   - garden_id not found
-    ![login](/doc/garden-delete-idnotfound.png)
+    ![login](/docs/garden-delete-idnotfound.png)
   - login user is not the garden owner or admin
-    ![login](/doc/garden-delete-notowner.png)
+    ![login](/docs/garden-delete-notowner.png)
   - garden successfully deleted
-    ![login](/doc/garden-delete-success.png)
+    ![login](/docs/garden-delete-success.png)
 
 ### Plants Routes
 
@@ -356,7 +356,7 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Authentication required: No
 - Required data: None
 - Expected response data
-  ![login](/doc/plant-get-allplants.png)
+  ![login](/docs/plant-get-allplants.png)
 
 #### READ plant by id
 
@@ -368,9 +368,9 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: plant_id
 - Expected response data
   - plant_id not found
-    ![login](/doc/plant-get-idnotfound.png)
+    ![login](/docs/plant-get-idnotfound.png)
   - plant_id successfully found
-    ![login](/doc/plants-get-idfound.png)
+    ![login](/docs/plants-get-idfound.png)
 
 #### CREATE new plant
 
@@ -382,15 +382,15 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: plant_id, plant name, genus
 - Expected response data
   - failed to provide token
-    ![login](/doc/plant-post-nojwt.png)
+    ![login](/docs/plant-post-nojwt.png)
   - login user not admin
-    ![login](/doc/plant-post-notadmin.png)
+    ![login](/docs/plant-post-notadmin.png)
   - plant name not provided
-    ![login](/doc/plant-post-notprovidename.png)
+    ![login](/docs/plant-post-notprovidename.png)
   - plant name already exists
-    ![login](/doc/plant-post-nameexists.png)
+    ![login](/docs/plant-post-nameexists.png)
   - plant successfully created
-    ![login](/doc/plant-post-success.png)
+    ![login](/docs/plant-post-success.png)
 
 #### UPDATE plant
 
@@ -402,17 +402,17 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: plant_id, plant info you want to update
 - Expected response data
   - failed to provide token
-    ![login](/doc/plant-update-nojwt.png)
+    ![login](/docs/plant-update-nojwt.png)
   - login user not admin
-    ![login](/doc/plant-update-notadmin.png)
+    ![login](/docs/plant-update-notadmin.png)
   - plant id not find
-    ![login](/doc/plant-update-notfoundid.png)
+    ![login](/docs/plant-update-notfoundid.png)
   - plant name already exists
-    ![login](/doc/plant-update-nameexists.png)
+    ![login](/docs/plant-update-nameexists.png)
   - invalid input
-    ![login](/doc/plant-update-invalidinput.png)
+    ![login](/docs/plant-update-invalidinput.png)
   - plant successfully updated
-    ![login](/doc/plant-post-success.png)
+    ![login](/docs/plant-post-success.png)
 
 #### DELETE plant
 
@@ -424,13 +424,13 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: plant_id
 - Expected response data
   - failed to provide token
-    ![login](/doc/plant-delete-nojwt.png)
+    ![login](/docs/plant-delete-nojwt.png)
   - login user not admin
-    ![login](/doc/plant-delete-notadmin.png)
+    ![login](/docs/plant-delete-notadmin.png)
   - plant id not find
-    ![login](/doc/plant-delete-notfoundid.png)
+    ![login](/docs/plant-delete-notfoundid.png)
   - plant successfully deleted
-    ![login](/doc/plant-delete-success.png)
+    ![login](/docs/plant-delete-success.png)
 
 ### garden_plants Routes
 
@@ -444,11 +444,11 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id
 - Expected response data
   - garden_id not found
-    ![login](/doc/gardenplants-get-idnotfound.png)
+    ![login](/docs/gardenplants-get-idnotfound.png)
   - garden_id successfully found but no garden_plants in this garden
-    ![login](/doc/gardenplants-get-noplants.png)
+    ![login](/docs/gardenplants-get-noplants.png)
   - garden_plants successfully found
-    ![login](/doc/gardenplants-get-success.png)
+    ![login](/docs/gardenplants-get-success.png)
 
 #### CREATE garden_plants by garden_id and plant_id
 
@@ -460,20 +460,20 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id, plant_id, position
 - Expected response data
   - failed to provide token
-    ![login](/doc/gp-post-nojwt.png)
+    ![login](/docs/gp-post-nojwt.png)
   - garden_id not found
-    ![login](/doc/gp-post-gardenidnotfound.png)
+    ![login](/docs/gp-post-gardenidnotfound.png)
   - not garden owner or admin
-    ![login](/doc/gp-post-notowner.png)
+    ![login](/docs/gp-post-notowner.png)
   - plant_id not found
-    ![login](/doc/gp-post-plantidnotfound.png)
+    ![login](/docs/gp-post-plantidnotfound.png)
   - garden_plants successfully created
-    ![login](/doc/gp-post-success.png)
+    ![login](/docs/gp-post-success.png)
   - invalid input
-    ![login](/doc/gp-post-invalidinput1.png)
-    ![login](/doc/gp-post-invalidinput2.png)
+    ![login](/docs/gp-post-invalidinput1.png)
+    ![login](/docs/gp-post-invalidinput2.png)
   - position already exists
-    ![login](/doc/gp-post-positionexists.png)
+    ![login](/docs/gp-post-positionexists.png)
 
 #### UPDATE garden_plants by garden_id and garden_plant_id
 
@@ -485,19 +485,19 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id, garden_plant_id, the garden_plant info you want to update
 - Expected response data
   - failed to provide token
-    ![login](/doc/gp-update-nojwt.png)
+    ![login](/docs/gp-update-nojwt.png)
   - garden_id not found
-    ![login](/doc/gp-update-gardenidnotfound.png)
+    ![login](/docs/gp-update-gardenidnotfound.png)
   - garden_plant_id not found
-    ![login](/doc/gp-update-gardenplantidnotfound.png)
+    ![login](/docs/gp-update-gardenplantidnotfound.png)
   - invalid input
-    ![login](/doc/gp-update-invalidinput1.png)
+    ![login](/docs/gp-update-invalidinput1.png)
   - updated position already exists
-    ![login](/doc/gp-update-positionexists.png)
+    ![login](/docs/gp-update-positionexists.png)
   - not garden owner or admin
-    ![login](/doc/gp-update-notowner.png)
+    ![login](/docs/gp-update-notowner.png)
   - garden_plants successfully updated
-    ![login](/doc/gp-update-success.png)
+    ![login](/docs/gp-update-success.png)
 
 #### DELETE garden_plants by garden_id and garden_plant_id
 
@@ -509,15 +509,15 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id, garden_plant_id
 - Expected response data
   - failed to provide token
-    ![login](/doc/gp-delete-nojwt.png)
+    ![login](/docs/gp-delete-nojwt.png)
   - garden_id not found
-    ![login](/doc/gp-delete-gardenidnotfound.png)
+    ![login](/docs/gp-delete-gardenidnotfound.png)
   - garden_plant_id not found
-    ![login](/doc/gp-delete-gardenplantidnotfound.png)
+    ![login](/docs/gp-delete-gardenplantidnotfound.png)
   - not garden owner or admin
-    ![login](/doc/gp-delete-notowner.png)
+    ![login](/docs/gp-delete-notowner.png)
   - garden_plant successfully deleted
-    ![login](/doc/gp-delete-success.png)
+    ![login](/docs/gp-delete-success.png)
 
 ### Comments Routes
 
@@ -531,14 +531,14 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id, message
 - Expected response data
   - failed to provide token
-    ![login](/doc/comment-post-nojwt.png)
+    ![login](/docs/comment-post-nojwt.png)
   - garden_id not found
-    ![login](/doc/comment-post-gardenidnotfound.png)
+    ![login](/docs/comment-post-gardenidnotfound.png)
   - invalid input
-    ![login](/doc/comment-post-invalidinput.png)
-    ![login](/doc/comment-post-invalidinput1.png)
+    ![login](/docs/comment-post-invalidinput.png)
+    ![login](/docs/comment-post-invalidinput1.png)
   - comment successfully posted
-    ![login](/doc/comment-post-success.png)
+    ![login](/docs/comment-post-success.png)
 
 #### READ all comments by garden_id
 
@@ -550,13 +550,13 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id
 - Expected response data
   - failed to provide token
-    ![login](/doc/comment-get-nojwt.png)
+    ![login](/docs/comment-get-nojwt.png)
   - garden_id not found
-    ![login](/doc/comment-get-gardenidnotfound.png)
+    ![login](/docs/comment-get-gardenidnotfound.png)
   - no comments found
-    ![login](/doc/comment-get-nocomment.png)
+    ![login](/docs/comment-get-nocomment.png)
   - comments successfully found
-    ![login](/doc/comment-get-success.png)
+    ![login](/docs/comment-get-success.png)
 
 #### UPDATE comment by garden_id and comment_id
 
@@ -569,18 +569,18 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Expected response data
 
   - failed to provide token
-    ![login](/doc/comment-update-nojwt.png)
+    ![login](/docs/comment-update-nojwt.png)
   - garden_id not found
-    ![login](/doc/comment-update-gardenidnotfound.png)
+    ![login](/docs/comment-update-gardenidnotfound.png)
   - comment_id not found in garden_id
-    ![login](/doc/comment-update-commentidnotfound.png)
+    ![login](/docs/comment-update-commentidnotfound.png)
   - not comment owner or admin
-    ![login](/doc/comment-update-notowner.png)
+    ![login](/docs/comment-update-notowner.png)
   - invalid input
-    ![login](/doc/comment-update-invalidinput.png)
-    ![login](/doc/comment-update-invalidinput1.png)
+    ![login](/docs/comment-update-invalidinput.png)
+    ![login](/docs/comment-update-invalidinput1.png)
   - comment successfully updated
-    ![login](/doc/comment-update-success.png)
+    ![login](/docs/comment-update-success.png)
 
 #### DELETE comment by garden_id and comment_id
 
@@ -592,21 +592,21 @@ Wide Range of Choices: There are numerous ORM libraries available for different 
 - Required data: garden_id, comment_id
 - Expected response data
   - failed to provide token
-    ![login](/doc/comment-delete-nojwt.png)
+    ![login](/docs/comment-delete-nojwt.png)
   - garden_id not found
-    ![login](/doc/comment-delete-gardenidnotfound.png)
+    ![login](/docs/comment-delete-gardenidnotfound.png)
   - comment_id not found in garden_id
-    ![login](/doc/comment-delete-commentidnotfound.png)
+    ![login](/docs/comment-delete-commentidnotfound.png)
   - not comment owner or admin
-    ![login](/doc/comment-delete-notowner.png)
+    ![login](/docs/comment-delete-notowner.png)
   - comment successfully deleted
-    ![login](/doc/comment-delete-success.png)
+    ![login](/docs/comment-delete-success.png)
 
 ---
 
 ## R6. An ERD for your app
 
-![ERD](/doc/ERD.png)
+![ERD](/docs/ERD.png)
 
 ## R7. Detail any third party services that your app will use
 
@@ -792,7 +792,8 @@ The GardenPlant model acts as a join table between Garden and Plant models, esta
 A Garden can be associated with multiple Plants through the GardenPlants, and a Plant can be associated with multiple Gardens through the GardenPlants.
 This is achieved by having garden_id and plant_id as foreign keys in the GardenPlant model, referencing the primary keys in the Garden and Plant models, respectively.
 
-User Model:
+**User Model:**
+
 In the User model, the user_name and email fields are required to be unique, ensuring that no two users can have the same user_name or email in the database. Fields formats are enforced through validation rules specified in the schema.
 
 To maintain data integrity, the is_admin field is set to False by default when a user is registered. This design prevents ordinary users from changing their is_admin status and gaining administrative privileges.
@@ -803,20 +804,21 @@ For user authentication, user needs to verify the provided email and password co
 
 Upon successful login, the user receives a JWT (JSON Web Token) that serves as an authentication token.
 
-Garden Model:
+**Garden Model:**
+
 In the Garden model, the garden_name field is required to be unique, ensuring that no two gardens can have the same garden_name in the database. Fields format is enforced through validation rules specified in the schema.
 
-Plant Model:
+**Plant Model:**
 
 In the Plant model, the plant_name field is required to be unique and cannot be null, ensuring that no two plants can have the same plant_name in the database. Fields format is enforced through validation rules specified in the schema. Genus is also required and cannot be null. Watering and growth_rate are set to default values if not provided. The validate for watering and growth_rate are set to only accept the provided values.
 
-GardenPlant Model:
+**GardenPlant Model:**
 
 In the GardenPlant model, the position field is mandatory and cannot be left empty. Each specific garden allows only one unique garden_plant to be placed in a particular position. This means that within a single garden, no two garden_plants can occupy the same position.
 
 The color and size fields are equipped with default values, which are utilized if no values are provided during the creation of a garden_plant object. For the color, size, and position fields, the validation has been set up to accept only predefined values.
 
-Comment Model:
+**Comment Model:**
 
 In the Comment model, the message field is mandatory and cannot be left empty and the format validation has been applied in schema. The comment_date field is set to the current date.
 
@@ -831,9 +833,9 @@ By assigning tasks to specific lists, I can track the progress of each task from
 
 Trello Board: [Link](https://trello.com/b/kkaIJSVf/virtualgarden-api)
 
-![Trello](/doc/Trello/trello1.png)
-![Trello](/doc/Trello/trello4.png)
-![Trello](/doc/Trello/trello6.png)
+![Trello](/docs/Trello/trello1.png)
+![Trello](/docs/Trello/trello4.png)
+![Trello](/docs/Trello/trello6.png)
 
 ---
 
