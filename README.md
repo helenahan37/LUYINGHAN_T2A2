@@ -23,19 +23,19 @@
 4. Create a role and set the password:
 
    ```
-   CREATE USER vg_dev WITH PASSWORD '123456';
+   CREATE USER <user_name> WITH PASSWORD '<password>';
    ```
 
 5. Grant all privileges on the database to the role:
 
    ```
-   GRANT ALL PRIVILEGES ON DATABASE virtual_garden_db TO vg_dev;
+   GRANT ALL PRIVILEGES ON DATABASE virtual_garden_db TO <user_name>;
    ```
 
 6. Grant all privileges on the schema to the role
 
    ```
-   GRANT ALL ON SCHEMA public TO vg_dev;
+   GRANT ALL ON SCHEMA public TO <user_name>;
    ```
 
 7. cd into 'src' folder and create a virtual environment and activate it:
@@ -47,8 +47,8 @@
 8. Rename the '.env.sample' file to '.env' file and add the following lines:
 
    ```
-   DATABASE_URL="postgresql+psycopg2://vg_dev:123456@localhost:5432/virtual_garden_db"
-   JWT_SECRET_KEY="secret"
+   DATABASE_URL="postgresql+psycopg2://<user_name>:<password>@localhost:5432/virtual_garden_db"
+   JWT_SECRET_KEY="<secret_key>"
    ```
 
 9. Install the required packages:
