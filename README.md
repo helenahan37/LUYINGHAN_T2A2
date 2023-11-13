@@ -1,4 +1,4 @@
-# T2A2 - API Webserver Project - Virtual Garden API
+API Webserver Project - Virtual Garden API
 
 ## Installation Instructions:
 
