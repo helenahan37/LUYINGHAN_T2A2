@@ -1,5 +1,9 @@
 API Webserver Project - Virtual Garden API
 
+The problem being addressed by building this particular app is the time and effort constraints that modern society poses on garden design and maintenance. Many individuals find it difficult to allocate enough time to plan and manage their real gardens effectively. Garden design requires careful consideration of plant selection, arrangement, and maintenance, which can be daunting and time-consuming for busy individuals. Additionally, lack of experience and knowledge about plants' attributes may lead to suboptimal garden designs and unsatisfactory outcomes.
+
+To tackle this problem, the virtual garden API provides a solution that allows users to design and experiment with their dream gardens in a virtual environment. By offering a wide selection of plants and customization options, users can freely explore their creativity without the limitations of time and physical space. The virtual garden also serves as a valuable learning platform where users can gain insights into plant attributes, growth cycles, and watering requirements, empowering them to make informed decisions when managing their real gardens.
+
 ## Installation Instructions:
 
 1. Clone the repository from GitHub
@@ -68,11 +72,6 @@ API Webserver Project - Virtual Garden API
     ```
     flask run
     ```
-
-
-The problem being addressed by building this particular app is the time and effort constraints that modern society poses on garden design and maintenance. Many individuals find it difficult to allocate enough time to plan and manage their real gardens effectively. Garden design requires careful consideration of plant selection, arrangement, and maintenance, which can be daunting and time-consuming for busy individuals. Additionally, lack of experience and knowledge about plants' attributes may lead to suboptimal garden designs and unsatisfactory outcomes.
-
-To tackle this problem, the virtual garden API provides a solution that allows users to design and experiment with their dream gardens in a virtual environment. By offering a wide selection of plants and customization options, users can freely explore their creativity without the limitations of time and physical space. The virtual garden also serves as a valuable learning platform where users can gain insights into plant attributes, growth cycles, and watering requirements, empowering them to make informed decisions when managing their real gardens.
 
 ---
 
