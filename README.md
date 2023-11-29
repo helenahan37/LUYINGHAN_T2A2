@@ -557,10 +557,3 @@ To tackle this problem, the virtual garden API provides a solution that allows u
 - **Werkzeug**: Werkzeug is a comprehensive WSGI web application library. I am using Werkzeug to handle HTTP requests and responses for my application.
 
 
-## Reference List
-
-[^1]: "What is PostgreSQL?", _EDUCBA_, Retrieved 21th July 2023, https://www.educba.com/what-is-postgresql/
-[^2]: "PostgreSQL and JSON – How to Use JSON Data in PostgreSQL", _freecodecamp_, Retrieved 21th July 2023, https://www.freecodecamp.org/news/postgresql-and-json-use-json-data-in-postgresql/
-[^3]: "What is PostgreSQL? Introduction, Advantages & Disadvantages", _guru99_, Retrieved 21th July 2023, https://www.guru99.com/introduction-postgresql.html
-[^4]: "What is ORM?", _EDUCBA_, Retrieved 21th July 2023, https://www.educba.com/what-is-orm/
-[^5]: "What is an ORM and Why You Should Use it", _bitsrc_, Retrieved 21th July 2023, https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a
